@@ -1,0 +1,347 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="css/motherProfile.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+       @import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+      @import url(https://fonts.googleapis.com/css?family=Chewy);
+      label{
+         font-family: 'Chewy';
+         color:aliceblue;
+         size: 20px;
+         font-size: large;
+      }
+      td {
+         margin: 30px 30px 30px 30px;
+         padding: 0 15px;
+      }
+      tr{
+         margin: 30px 30px 30px 30px;
+      }
+      table{
+         
+         border-collapse: separate;
+         border-spacing: 0 1em;
+         width:80%; 
+         margin-left:15%; 
+         margin-right:15%;
+         
+         border: 6px solid rgb(255, 255, 255);
+         border-radius: 10px;
+      }
+      table.center{
+         margin-left:20%; 
+         margin-right:auto;
+      }
+      select {
+         width: 100%;
+         padding: 8px 8px;
+         border: none;
+         border-radius: 4px;
+         background-color: #f1f1f1;
+      }
+      input{
+         width: 100%;
+         padding: 8px 8px;
+         border: none;
+         border-radius: 4px;
+         background-color: #f1f1f1;
+      }
+      input#sum{
+         
+         padding: 8px 8px;
+         border: none;
+         border-radius: 4px;
+         background-color: #f1f1f1;
+      }
+
+    </style>
+   </head>
+    <body>    
+      <nav class="navbar">.         
+         <div class="nav111">
+            <a href ="home.html#Home">
+             <div class="button">
+                <div class="icon">
+                   <i class="fa fa-home"></i>
+                </div>
+            </a>
+         </div>
+             <a href ="home.html#About_Us">
+               <div class="button">
+                  <div class="icon" >
+                     <i class="fa fa-info-circle"></i>
+               </div>
+            </a> 
+             </div>
+             <a href ="home.html#Info">
+               <div class="button">
+                  <div class="icon">
+                     <i class="fa fa-eye"></i>
+                  </div>
+               </a>
+               
+             </div>
+             <a href ="home.html#Contact_Us">
+               <div class="button">
+                  <div class="icon">
+                     <i class="fa fa-address-card"></i>
+                  </div>
+               </a>
+             </div>
+          </div>
+         </nav>
+      <div class="middle">
+	
+         <div class="page">
+            
+            <ul class="main">
+               <li><a href="http://localhost/Healthcare_iwp/html/myinfo.html"><span>My Info</span></a></li>
+               <li><a href="http://localhost/Healthcare_iwp/html/mytrack.html"><span>Track My Health</span></a></li>
+               <li><a href="http://localhost/Healthcare_iwp/html/mybaby.html"><span>My Baby</span></a></li>
+               <li><a href="http://localhost/Healthcare_iwp/html/myappointment.html"><span>Appointments</span></a></li>
+               <li><a href="http://localhost/Healthcare_iwp/html/myguide.html"><span>Guide</span></a></li>
+               <li><a href="http://localhost/Healthcare_iwp/html/mytest.html"><span>Tests</span></a></li>
+            </ul>
+      
+            <div class="right">
+               <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to MotherHood India</h1>
+                <div class="icon" id="icon" >
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  
+                    
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    
+
+
+                    <img src="Pictures/trackh2.png" alt="acc_icon" width="155">
+                </div>
+                <div>
+                  
+               <form action="php/selfdetails.php">
+                  <table class="mytable">
+                     <tr>
+                        <td>
+                           <label style="font-family: 'Chewy';">Height (in cms): </label>&nbsp;
+                        </td>
+                        <td>
+                           <input type="number" id="hgt" name="hgt" value="150" min="100" max="300">
+                        </td>
+                        &nbsp;&nbsp;&nbsp;
+                        <td>
+                           <label style="font-family: 'Chewy';">Weight (in Kgs): </label>&nbsp;
+                        </td>
+                        <td>
+                           <input type="number" id="wgt" name="wgt" min="20" max="150" value="60">
+                        </td>
+                        <td>
+                           <label style="font-family: 'Chewy';">Blood Group: </label>&nbsp;
+                        </td>
+                        <td>
+                           <select name="bgrp" id="bgrp">
+                              <option value="A1">A+</option>
+                              <option value="A2">A-</option>
+                              <option value="B1">B+</option>
+                              <option value="B2">B-</option>
+                              <option value="O1">O+</option>
+                              <option value="O2">O-</option>
+                              <option value="AB1">AB+</option>
+                              <option value="AB2">AB-</option>
+                            </select>
+                        </td>
+                        <td>
+                           <input type="submit" style="width: 100%;
+                     padding: 8px 8px;
+                     margin-left:auto; 
+                      margin-right:auto;text-align:center; 
+                     border: none;
+                     border-radius: 4px;
+                     background-color: #f1f1f1;" id="sum" value="Update">
+                        </td>
+                     </tr>
+                  </table>
+               </form>
+               <br>
+               </div>
+               <div class="ch2">
+                  <form action="php/track.php">
+                     <table class="mytable">
+                        
+                        <tr>
+                           <td>
+                              <label>Day: </label>&nbsp;
+                           </td>
+                           <td>
+                              <select name="day" id="day" >
+                                 <option value="1">Day 1 (Monday)</option>
+                                 <option value="2">Day 2 (Tuesday)</option>
+                                 <option value="3">Day 3 (Wednesday)</option>
+                                 <option value="4">Day 4 (Thursday)</option>
+                                 <option value="5">Day 5 (Friday)</option>
+                                 <option value="6">Day 6 (Saturday)</option>
+                                 <option value="7">Day 7 (Sunday)</option>
+                               </select>
+                           </td>
+                           <td>
+                              <label>Calories (kcal)</label>&nbsp;
+                           </td>
+                           <td>
+                              <input type="number" id="cal" name="cal" min="0" max="10000" >
+                           </td>
+                           <td>
+                              <label>Steps : </label>&nbsp;
+                           </td>
+                           <td>
+                              <input type="number" id="stepc" name="stepc" min="0" max="25000" >
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <label>Nutrition (cal) </label>&nbsp;
+                           </td>
+                           <td>
+                              <input type="number" id="nutrition" name="nutrition"  min="100" max="20000">
+                           </td>
+                           <td>
+                              <label>Protein (cal) </label>&nbsp;
+                           </td>
+                           <td>
+                              <input type="number" id="protein" name="protein" min="100" max="20000">
+                           </td>
+                           <td>
+                              <label>Carbohydrates (cal)</label>&nbsp;
+                           </td>
+                           <td>
+                              <input type="number" id="carb" name="carb"  min="100" max="20000">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <label for="water">Water Intake:</label>
+                           </td>
+                           <td>
+                              <select name="water" id="water">
+                                 <option value="250"> less than 500ml</option>
+                                 <option value="500">500ml</option>
+                                 <option value="1000">1 litre</option>
+                                 <option value="2000">2 litre</option>
+                                 <option value="3000">3 litre</option>
+                                 <option value="4000">4 litre</option>
+                                 <option value="5000">5 litre</option>
+                                 <option value="6000">6 litre</option>
+                                 <option value="7000">7 litre</option>
+                                 <option value="8000">>7 litre</option>
+                               </select>
+                           </td>
+                           <td>
+                              <label for="sleep">Sleep:</label>
+                           </td>
+                           <td>
+                              <select name="sleep" id="sleepr">
+                                 <option value="0"> less than 1hr</option>
+                                 <option value="1">1-2 hrs</option>
+                                 <option value="2">2-3 hrs</option>
+                                 <option value="3">3-4 hrs</option>
+                                 <option value="4">4-5 hrs</option>
+                                 <option value="5">5-6 hrs</option>
+                                 <option value="6">6-7 hrs</option>
+                                 <option value="7">7-8 hrs</option>
+                                 <option value="8">8-9 hrs</option>
+                                 <option value="9">>greater than 9hrs</option>
+                               </select>
+                           </td>
+                           <td>
+                              &nbsp;
+                           </td>
+                           <td>
+                              <input type="submit" style="width: 100%;
+                                 padding: 8px 8px;
+                                 margin-left:auto; 
+                                 margin-right:auto;text-align:center; 
+                                 border: none;
+                                 border-radius: 4px;
+                                 background-color: #f1f1f1;" id="sum" value="Update">
+                        </td>
+                           </td>
+                        </tr>
+   
+                        
+   
+   
+                     </table>
+                     <br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     
+                  </form>
+
+
+
+               </div>
+            </div>
+           
+         
+         </div>
+         
+         </div>
+            
+      </div>
+      <div class="footer">
+         <div class="wrapper">
+             <div class="button" onclick="location.href = 'https://www.facebook.com/';">
+                <div class="icon">
+                   <i class="fab fa-facebook-f"></i>
+                </div>
+               <span>Facebook</span>
+             </div>
+             <div class="button" onclick="location.href = 'https://twitter.com/?lang=en-in';">
+                <div class="icon">
+                   <i class="fab fa-twitter"></i>
+                </div>
+               <span>Twitter</span>
+             </div>
+             <div class="button"  onclick="location.href = 'https://www.instagram.com/';">
+                <div class="icon">
+                   <i class="fab fa-instagram"></i>
+                </div>
+               <span>Instagram</span>
+             </div>
+             <div class="button" onclick="location.href = 'https://www.youtube.com/';">
+                <div class="icon">
+                   <i class="fab fa-youtube"></i>
+                </div>
+               <span>YouTube</span>
+             </div>
+          </div>
+          <div class="copyright">
+            All rights reserved &copy; TeamMotherHood
+         </div>
+     </div>
+    </body>
+</html>

@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <script>
+            const val = document.getElementById('signUp')
+        function check(){
+            const signUpButton = document.getElementById('signUp');
+            const signInButton = document.getElementById('signIn');
+            const container = document.getElementById('container');
+            signUpButton.addEventListener('click', () =>container.classList.add('right-panel-active'));
+            signInButton.addEventListener('click', () =>container.classList.remove('right-panel-active'));
+        }
+        function validateForm1() 
+        {
+            var x1 = document.forms["signupForm"]["name"].value;
+            var x2 = document.forms["signupForm"]["email"].value;
+            var x3 = document.forms["signupForm"]["pass"].value;
+            if(x1.length===0 || x2=="" || x3=="")
+            {
+                if (x1.length === 0 ) 
+                {
+                    alert("Name must be filled out");
+                    return false;
+                }
+                if (x2 == "" ) 
+                {
+                    alert("Email must be filled out");
+                    return false;
+                }
+                if (x3 == "" ) 
+                {
+                    alert("Password must be filled out");
+                    return false;
+                }
+            }
+            else if(!(/^[a-zA-z]*$/.test(x1)))
+            {
+                    alert("Incorrect First Name - Only alphabets and whitespace are allowed");
+                    return false;
+                }
+            else if(!(/[a-zA-z]+[0-9]+[&*$#@]+/.test(x3)))
+            {
+                alert("Error! Your Password should containg characters, numbers and special characters.");
+                return false;
+            }   
+            else
+                return true;      
+        }
+        function validateForm2() 
+        {
+            var y1 = document.forms["signinForm"]["email"].value;
+            var y2 = document.forms["signinForm"]["pass"].value;
+            if(y1="" || y2=="" )
+            {
+                if (y1=="") 
+                {
+                    alert("Email must be filled out");
+                    return false;
+                }
+                if (y2=="") 
+                {
+                    alert("Password must be filled out");
+                    return false;
+                }
+            }
+            else if(!(/[a-zA-z]+[0-9]+[&*$#@]+/.test(y2)))
+            {
+                alert("Error! Your Password should containg characters, numbers and special characters.");
+                return false;
+            }
+            else
+                return true;
+        }
+        </script>
+        
+        <link rel="stylesheet" href="css/signup.css">
+    </head>
+    <body>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <div class="header">
+          WELCOME TO MOTHERHOOD
+        </div>
+        <div class="container right-panel-active" id="container">
+          <div class="form-container sign-up-container ">
+              <form name="signupForm" onsubmit="return validateForm1()" method="get" action="http://localhost/Healthcare_iwp/html/php/signup.php" >
+                  <h1>Create Account</h1>
+                  <div class="social-container">
+                      <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                      <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                  <span>or use your email for registration</span>
+                  <input type="text" placeholder="Name" name="name" />
+                  <input type="email" placeholder="Email"  name="email" />
+                  <input type="password" placeholder="Password" minlength="6"  name="pass"/>
+                  <button type="submit">Sign Up</button>
+              </form>
+          </div>
+          <div class="form-container sign-in-container">
+            <form name="signinForm" onsubmit="return validateForm2()" method="get" action="http://localhost/Healthcare_iwp/html/php/signup.php" >
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your account</span>
+                <input type="email" placeholder="Email"  name="email"/>
+                <input type="password" placeholder="Password" minlength="6"  name="pass"/>
+                <a href="#">Forgot your password?</a>
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+          <div class="overlay-container">
+              <div class="overlay">
+                  <div class="overlay-panel overlay-left">
+                      <h1>Welcome Back!</h1>
+                      <p>To keep connected with Team Motherhood please login with your info</p>
+                      <button class="ghost" id="signIn" onclick="check();">Sign In</button>
+                  </div>
+                  <div class="overlay-panel overlay-right">
+                    <h1>Welcome to TMI</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp" onclick="check();">Sign Up</button>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div>
+    <section style="height: 25%;">
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+      <div class="wave wave4"></div>
+  </section>
+  </div>
+    </body>
+</html>
